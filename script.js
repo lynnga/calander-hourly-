@@ -1,6 +1,10 @@
-
+var timeArray = [9, 10, 11, 12, 1, 2, 3, 4, 5]
 // // display our current day on the page 
-// document.addEventListener("load",function(){
+$(document).ready(function () {
+    for (let i = 0; i < timeArray.length; i++) {
+        var timeId = timeArray[i];
+    }
+})
 
 
 
@@ -12,10 +16,10 @@ var currentHour = moment().hour();
 var array = document.getElementById("container").querySelectorAll(".row");
 for (let i = 0; i < array.length; i++) {
     var timeComponent = array[i];
-    var time = 9  + i;
+    var time = 9 + i;
 
 
-    if ( time < currentHour) {
+    if (time < currentHour) {
         // define what the selectors 
         timeComponent.classList.add('past')
     } else if (time === currentHour) {
@@ -27,7 +31,15 @@ for (let i = 0; i < array.length; i++) {
         timeComponent.classList.add('future')
     }
 }
+function handleBtnClick(event) {
+    var btn = $(this)
+    var siblings = btn.siblings()
+    var textArea = siblings[1]
+    var textAreaText = textArea.value
+    var timeDivId = siblings[0].getAttribute("id")
+    console.log(textAreaText, timeDivId)
 
-// load any saved datat from our local storage
-// Set Item
+    localStorage.setItem(timeDivId, textAreaText)
+   
 
+}
