@@ -11,8 +11,8 @@ What languages used: HTML, CSS and JaveScript and moment
 ![screenshot of website (calander website.png
 
 ##### Deploy application link
-Git hub url =
-Deployed website url =
+Git hub url = https://github.com/lynnga/calander-hourly-application
+Deployed website url =  https://lynnga.github.io/calander-hourly-application/
 
 additonal information:
 Email me at lingamliel@gmail.com
